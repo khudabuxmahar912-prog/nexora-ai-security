@@ -11,6 +11,7 @@ export default function Footer() {
           <p className="mt-2 text-sm text-muted">
             Intelligent software. Secure AI. Automated operations.
           </p>
+          <p className="mt-2 text-sm text-muted">{site.email}</p>
         </div>
         <nav aria-label="Footer">
           <p className="text-sm font-semibold">Company</p>
