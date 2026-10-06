@@ -22,7 +22,9 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${grotesk.variable}`}>
       <body>
   <Navbar />
-  <div className="min-h-[70vh]">{children}</div>
+  <main className="min-h-[70vh]">
+    {children}
+  </main>
   <Footer />
 </body>
     </html>
