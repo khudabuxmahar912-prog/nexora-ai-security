@@ -1,6 +1,7 @@
 export const site = {
   name: "NEXORA AI SECURITY",
   tagline: "BUILD. SECURE. AUTOMATE.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   email: "khudabuxmahar912@gmail.com",
   github: "https://github.com/khudabuxmahar912-prog",
   phone: "+923203879139",

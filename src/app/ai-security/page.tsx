@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "AI Security Services | NEXORA AI SECURITY",
   description:
     "AI security audits, LLM security testing, AI agent security, prompt-injection and data-leakage testing for authorized AI systems.",
+    alternates:{ canonical: "/ai-security"},
 };
 
 export default function AiSecurityPage() {

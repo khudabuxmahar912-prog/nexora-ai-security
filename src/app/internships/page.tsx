@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Internships | NEXORA AI SECURITY",
   description:
     "Remote, project-based internships in AI/ML, AI agents, cybersecurity, full-stack development, Python, QA and AI research.",
+    alternates:{ canonical: "/internships"},
 };
 
 const tracks = [

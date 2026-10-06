@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy Policy | NEXORA AI SECURITY",
   description: "How NEXORA AI SECURITY handles information.",
+  alternates:{ canonical: "/privacy"},
 };
 
 export default function PrivacyPage() {

@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Security | NEXORA AI SECURITY",
   description: "How NEXORA AI SECURITY approaches security and responsible disclosure.",
+  alternates:{ canonical: "/security"},
 };
 
 export default function SecurityPage() {

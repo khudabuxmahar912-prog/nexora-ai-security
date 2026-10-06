@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Contact | NEXORA AI SECURITY",
   description:
     "Talk to NEXORA AI SECURITY about AI security, AI agents, automation and software development.",
+    alternates:{ canonical: "/contact"},
 };
 
 const cardClass = "rounded-xl border border-border bg-surface p-6";

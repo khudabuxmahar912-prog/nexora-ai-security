@@ -1,6 +1,10 @@
 import ButtonLink from "@/components/ui/ButtonLink";
 import Link from "next/link";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 const divisions = [
   {
     number: "01",

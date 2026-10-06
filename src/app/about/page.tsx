@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "About | NEXORA AI SECURITY",
   description:
     "NEXORA AI SECURITY is a remote-first technology company focused on AI, cybersecurity, software engineering, automation, research and talent development.",
+    alternates:{ canonical: "/about"},
 };
 
 const focus = [

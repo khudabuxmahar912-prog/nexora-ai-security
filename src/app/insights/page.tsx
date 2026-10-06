@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Insights | NEXORA AI SECURITY",
   description:
     "Articles on AI security, AI agents, automation and software engineering from NEXORA AI SECURITY.",
+    alternates:{ canonical: "/insights"},
 };
 
 const topics = [

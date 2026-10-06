@@ -5,6 +5,7 @@ import { projects } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Projects | NEXORA AI SECURITY",
   description: "Projects built by the NEXORA AI SECURITY team.",
+  alternates:{ canonical: "/projects"},
 };
 
 export default function ProjectsPage() {

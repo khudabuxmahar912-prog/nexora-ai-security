@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "AI & Software Development | NEXORA AI SECURITY",
   description:
     "AI agents, AI automation, RAG applications, chatbots, APIs, SaaS and custom AI/ML solutions built with security in mind.",
+    alternates:{ canonical: "/ai-software"},
 };
 
 export default function AiSoftwarePage() {

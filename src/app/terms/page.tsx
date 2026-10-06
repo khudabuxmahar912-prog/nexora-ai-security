@@ -4,6 +4,7 @@ import LegalPage from "@/components/sections/LegalPage";
 export const metadata: Metadata = {
   title: "Terms of Service | NEXORA AI SECURITY",
   description: "Terms for using the NEXORA AI SECURITY website.",
+  alternates:{ canonical: "/terms"},
 };
 
 export default function TermsPage() {
