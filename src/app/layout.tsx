@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const grotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-grotesk" });
@@ -18,7 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${grotesk.variable}`}>
-      <body>{children}</body>
+      <body>
+  <Navbar />
+  <div className="min-h-[70vh]">{children}</div>
+  <Footer />
+</body>
     </html>
   );
 }
