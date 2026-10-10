@@ -7,6 +7,9 @@ class Settings(BaseSettings):
     environment: str = "development"
     cors_origins: str = "http://localhost:3000"
     database_url: str
+    secret_key: str
+    access_token_minutes: int = 60
+    cookie_secure: bool = False
 
     @property
     def cors_origins_list(self) -> list[str]:
