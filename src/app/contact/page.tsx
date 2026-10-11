@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import ContactForm from "@/components/sections/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | NEXORA AI SECURITY",
@@ -68,14 +69,12 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div className={`mt-4 max-w-4xl ${cardClass}`}>
-        <h2 className="font-display font-bold">Contact form</h2>
-        <p className="mt-2 text-sm text-muted">
-          The online contact form is Coming Soon. It arrives with our backend
-          in the next phase. Until then, use the email, phone or WhatsApp
-          above.
-        </p>
+     <div className={`mt-4 max-w-4xl ${cardClass}`}>
+        <h2 className="font-display font-bold">Send us a message</h2>
+        <div className="mt-4">
+          <ContactForm />
+        </div>
       </div>
-    </div>
+      </div>
   );
 }
