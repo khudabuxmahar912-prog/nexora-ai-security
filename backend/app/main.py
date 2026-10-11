@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from app.auth import router as auth_router
 from app.config import settings
 from app.db import get_db
+from app.internships import router as internships_router
 from app.leads import router as leads_router
 
 app = FastAPI(title="NEXORA AI SECURITY API")
@@ -20,6 +21,7 @@ app.add_middleware(
 
 app.include_router(auth_router)
 app.include_router(leads_router)
+app.include_router(internships_router)
 
 
 @app.get("/health")

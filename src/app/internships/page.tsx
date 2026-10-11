@@ -1,26 +1,16 @@
 import type { Metadata } from "next";
 import ButtonLink from "@/components/ui/ButtonLink";
+import { INTERNSHIP_TRACKS } from "@/lib/internships";
 
 export const metadata: Metadata = {
   title: "Internships | NEXORA AI SECURITY",
   description:
-    "Remote, project-based internships in AI/ML, AI agents, cybersecurity, full-stack development, Python, QA and AI research.",
-    alternates:{ canonical: "/internships"},
+    "Remote, project-based internships in full-stack development, agentic AI, generative AI, Python, JavaScript, QA and more.",
+  alternates: { canonical: "/internships" },
 };
 
-const tracks = [
-  "AI/ML",
-  "AI Agent Development",
-  "Cybersecurity",
-  "Full-Stack Development",
-  "Python",
-  "QA / Software Testing",
-  "AI Research",
-  "Remote Project-Based Opportunities",
-];
-
 const structure = [
-  "Learning: guided study of the fundamentals for your track.",
+  "Learning: guided study of the fundamentals for your internship.",
   "Practical projects: real tasks on real software.",
   "Mentorship: regular feedback from a mentor.",
   "Evaluation: submitted work is reviewed and assessed.",
@@ -30,8 +20,8 @@ const structure = [
 const steps = [
   "Submit your application with your skills, projects and links.",
   "Your application is reviewed.",
-  "Shortlisted applicants are invited to an interview.",
-  "Selected applicants are assigned a track and a mentor.",
+  "After you apply, you are invited to the internship WhatsApp group.",
+  "Selected applicants are assigned an internship track and a mentor.",
 ];
 
 const faqs = [
@@ -40,8 +30,8 @@ const faqs = [
     a: "Yes. The program is remote-first and project-based.",
   },
   {
-    q: "Which tracks are available?",
-    a: "AI/ML, AI agent development, cybersecurity, full-stack development, Python, QA/software testing and AI research.",
+    q: "Which internships are available?",
+    a: "See the list above. You choose one when you apply.",
   },
   {
     q: "How are interns evaluated?",
@@ -49,7 +39,7 @@ const faqs = [
   },
   {
     q: "How do I apply?",
-    a: "The online application form is Coming Soon. Use the contact page for questions in the meantime.",
+    a: "Use the Apply for an Internship button on this page and fill in the form. A PDF CV is optional.",
   },
 ];
 
@@ -67,18 +57,16 @@ export default function InternshipsPage() {
         mentorship and remote project-based experience.
       </p>
       <div className="mt-6 flex flex-wrap items-center gap-3">
-        <span className="rounded-lg border border-border px-5 py-3 text-sm font-semibold text-muted">
-          Apply for an Internship · Coming Soon
-        </span>
+        <ButtonLink href="/internships/apply">Apply for an Internship</ButtonLink>
         <ButtonLink href="/contact" variant="secondary">
           Ask a question
         </ButtonLink>
       </div>
 
       <section className="py-12">
-        <h2 className="font-display text-2xl font-bold">Available tracks</h2>
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {tracks.map((t) => (
+        <h2 className="font-display text-2xl font-bold">Available internships</h2>
+        <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {INTERNSHIP_TRACKS.map((t) => (
             <li
               key={t}
               className="rounded-xl border border-border bg-surface p-4 text-sm font-semibold"

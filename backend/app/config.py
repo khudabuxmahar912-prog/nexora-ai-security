@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     secret_key: str
     access_token_minutes: int = 60
     cookie_secure: bool = False
+    whatsapp_group_url: str = ""
 
     @property
     def cors_origins_list(self) -> list[str]:
