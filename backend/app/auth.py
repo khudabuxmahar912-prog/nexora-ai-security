@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from app.config import settings
 from app.db import get_db
 from app.models import User, UserRole
+from app.ratelimit import RateLimiter
 from app.security import (
     COOKIE_NAME,
     create_access_token,
@@ -17,6 +18,8 @@ from app.security import (
 )
 
 router = APIRouter(prefix="/auth", tags=["auth"])
+
+login_limiter = RateLimiter(max_requests=10, window_seconds=900)
 
 # Used so a wrong email takes the same time as a wrong password.
 DUMMY_HASH = hash_password("not-a-real-password")
@@ -36,7 +39,9 @@ class UserOut(BaseModel):
     role: UserRole
 
 
-@router.post("/login", response_model=UserOut)
+@router.post(
+    "/login", response_model=UserOut, dependencies=[Depends(login_limiter)]
+)
 def login(data: LoginRequest, response: Response, db: Session = Depends(get_db)):
     user = db.scalar(select(User).where(User.email == data.email.lower()))
     valid = verify_password(data.password, user.password_hash if user else DUMMY_HASH)
