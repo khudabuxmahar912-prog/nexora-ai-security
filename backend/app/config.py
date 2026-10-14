@@ -10,7 +10,15 @@ class Settings(BaseSettings):
     secret_key: str
     access_token_minutes: int = 60
     cookie_secure: bool = False
+    trust_proxy: bool = False
     whatsapp_group_url: str = ""
+
+    smtp_host: str = "smtp.gmail.com"
+    smtp_port: int = 587
+    smtp_user: str = ""
+    smtp_password: str = ""
+    notify_email: str = ""
+    admin_url: str = "http://localhost:3000/admin"
 
     @property
     def cors_origins_list(self) -> list[str]:

@@ -13,7 +13,7 @@ from app.security import require_roles
 
 router = APIRouter(prefix="/leads", tags=["leads"])
 
-lead_limiter = RateLimiter(max_requests=5, window_seconds=3600)
+lead_limiter = RateLimiter(max_requests=5, window_seconds=3600,use_forwarded=True)
 staff_only = require_roles(UserRole.founder, UserRole.admin)
 
 

@@ -9,7 +9,14 @@ from app.db import get_db
 from app.internships import router as internships_router
 from app.leads import router as leads_router
 
-app = FastAPI(title="NEXORA AI SECURITY API")
+is_prod = settings.environment == "production"
+
+app = FastAPI(
+    title="NEXORA AI SECURITY API",
+    docs_url=None if is_prod else "/docs",
+    redoc_url=None,
+    openapi_url=None if is_prod else "/openapi.json",
+)
 
 app.add_middleware(
     CORSMiddleware,

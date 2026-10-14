@@ -25,7 +25,7 @@ from app.storage import cv_path, delete_cv, save_cv
 
 router = APIRouter(prefix="/internships", tags=["internships"])
 
-apply_limiter = RateLimiter(max_requests=5, window_seconds=3600)
+apply_limiter = RateLimiter(max_requests=5, window_seconds=3600, use_forwarded=True)
 staff_only = require_roles(UserRole.founder, UserRole.admin)
 email_adapter = TypeAdapter(EmailStr)
 
